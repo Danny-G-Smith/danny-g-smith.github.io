@@ -144,14 +144,14 @@ class DBHelper {
    * Restaurant page URL.
    */
   static urlForRestaurant(restaurant) {
-    return (`./mws-restaurant-stage-1.test/restaurant.html?id=${restaurant.id}`);
+    return (`./mws-restaurant-stage-1/restaurant.html?id=${restaurant.id}`);
   }
 
   /**
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`/mws-restaurant-stage-1.test/img/${restaurant.photograph}`);
+    return (`/mws-restaurant-stage-1/img/${restaurant.photograph}`);
   }
 
   /**
