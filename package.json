@@ -19,13 +19,12 @@
    "homepage": "https://github.com/Danny-G-Smith/mws-restaurant-stage-1#readme",
    "devDependencies": {
       "browser-sync": "^2.24.6",
-      "dotenv": "^6.0.0",
       "eslint": "^5.3.0",
       "eslint-config-prettier": "^2.9.0",
       "eslint-config-udacity": "^2.0.2",
       "eslint-plugin-import": "^2.13.0",
       "eslint-plugin-prettier": "^2.6.2",
-      "gulp4": "^4.0.2",
+      "gulp4": "^4.0.3",
       "prettier": "1.14.1"
    }
 }
