@@ -2,13 +2,6 @@ let restaurants, neighborhoods, cuisines
 var newMap
 var markers = []
 
-require('dotenv').load();
-if (process.env.NODE_ENV !== 'production') {
-   require('dotenv').load();
-}
-
-console.log('Now the value for FOO is:', process.env.FOO);
-
 /**
  *      Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
