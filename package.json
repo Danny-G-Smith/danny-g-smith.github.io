@@ -24,7 +24,6 @@
       "eslint-config-udacity": "^2.0.2",
       "eslint-plugin-import": "^2.13.0",
       "eslint-plugin-prettier": "^2.6.2",
-      "gulp4": "^4.0.3",
       "prettier": "1.14.1"
    }
 }
