@@ -1,0 +1,31 @@
+{
+   "name": "mws-restaurant-stage-1",
+   "version": "1.0.0",
+   "description": "--- #### _Three Stage Course Material Project - Restaurant Reviews_",
+   "main": "index.html",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "lint": "eslint ./js/*.js"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Danny-G-Smith/mws-restaurant-stage-1.git"
+   },
+   "author": "Danny G Smith",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/Danny-G-Smith/mws-restaurant-stage-1/issues"
+   },
+   "homepage": "https://github.com/Danny-G-Smith/mws-restaurant-stage-1#readme",
+   "devDependencies": {
+      "browser-sync": "^2.24.6",
+      "dotenv": "^6.0.0",
+      "eslint": "^5.3.0",
+      "eslint-config-prettier": "^2.9.0",
+      "eslint-config-udacity": "^2.0.2",
+      "eslint-plugin-import": "^2.13.0",
+      "eslint-plugin-prettier": "^2.6.2",
+      "gulp4": "^4.0.2",
+      "prettier": "1.14.1"
+   }
+}
