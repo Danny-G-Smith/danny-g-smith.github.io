@@ -74,6 +74,7 @@ fetchRestaurantFromURL = (callback) => {
    } else {
       DBHelper.fetchRestaurantById(id, (error, restaurant) => {
          self.restaurant = restaurant
+         //debugger;
          if (!restaurant) {
             console.error(error)
             return
@@ -91,11 +92,15 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
    const name = document.getElementById('restaurant-name')
    name.innerHTML = restaurant.name
 
+   // const alt = document.getElementById('restaurant-alt')
+   // alt.innerHTML = restaurant.alt
+
    const address = document.getElementById('restaurant-address')
    address.innerHTML = restaurant.address
    //debugger;
    const image = document.getElementById('restaurant-img')
-   image.className = 'restaurant-img'
+   image.alt   = document.getElementsByTagName('restaurant-alt')
+   image.className = restaurant.img
    image.src = DBHelper.imageUrlForRestaurant(restaurant)
 
    const cuisine = document.getElementById('restaurant-cuisine')

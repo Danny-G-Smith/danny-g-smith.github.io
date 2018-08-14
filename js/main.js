@@ -169,10 +169,17 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 createRestaurantHTML = (restaurant) => {
    const li = document.createElement('li')
 
-   const image = document.createElement('img')
-   image.className = 'restaurant-img'
-   image.src = DBHelper.imageUrlForRestaurant(restaurant)
-   li.append(image)
+
+   //debugger;
+   const image = document.createElement('img');
+   image.className = 'restaurant-img';
+   image.alt = `${restaurant.name} Restaurant`;
+   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+   li.append(image);
+
+   // const alt = document.createElement('alt')
+   // alt.innerHTML = restaurant.alt
+   // li.append(alt)
 
    const name = document.createElement('h1')
    name.innerHTML = restaurant.name
@@ -226,7 +233,7 @@ if ('serviceWorker' in navigator) {
    window.addEventListener('load', () => {
       navigator.serviceWorker
          .register('../sw_cached_site.js')
-         .then((reg) => console.log('Service Worker: Registered Assets'))
-         .catch((err) => console.log(`Service Worker: Error: ${err}`))
+         //.then((reg) => console.log('Service Worker: Registered Assets'))
+         //.catch((err) => console.log(`Service Worker: Error: ${err}`))
    })
 }
