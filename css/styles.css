@@ -69,14 +69,14 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 nav {
    background-color: #890309;
    display: flex;
-   height: 80px;
-   text-align: center;
+   /*height: 80px;*/
+   /*text-align: center;*/
    text-align: center;
    width: 100%;
 }
 
 nav h1 {
-   margin: auto;
+   margin: 10px auto;
 }
 
 nav h1 a {
