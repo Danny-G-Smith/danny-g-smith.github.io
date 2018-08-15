@@ -26,7 +26,7 @@ a {
 }
 
 a:hover, a:focus {
-   color: #3397db;
+   color: #000;
    text-decoration: none;
 }
 
@@ -52,11 +52,11 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #footer {
    background-color: #444;
    box-sizing: border-box;
-   color: #aaa;
+   color: #ddd;
    display: flex;
    flex-direction: column;
    flex-wrap: nowrap;
-   font-size: 8pt;
+   font-size: 14px;
    height: 65px;
    justify-content: flex-end;
    letter-spacing: 1px;
@@ -81,14 +81,19 @@ nav h1 {
 
 nav h1 a {
    color: #fff;
-   font-size: 18px;
+   font-size: 24px;
    font-weight: 200;
    letter-spacing: 10px;
    text-transform: uppercase;
 }
 
+nav h1 a:hover {
+   color: #fff;
+   text-shadow: 2px 2px 10px #fffdd0;
+}
+
 #breadcrumb {
-   background-color: #ddd;
+   background-color: #fff;
    box-sizing: border-box;
    font-size: 18px;
    list-style: none;
@@ -106,7 +111,7 @@ nav h1 a {
 #breadcrumb li + li:before {
    color: black;
    content: "/\00a0";
-   padding: 8px;
+   padding: 10px;
 }
 
 /* Add a color to all links inside the list */
@@ -117,7 +122,8 @@ nav h1 a {
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-   color: #890309;
+   color: #000;
+   text-shadow: 1px 1px 3px #fffdd0;
    text-decoration: underline;
 }
 
@@ -131,9 +137,11 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
    align-items: center;
-   background-color: #3397DB;
-   height: 50px;
+   background-color: #252831;
+   display: flex;
+   height: 85px;
    width: 100%;
+   justify-items: center;
 }
 
 .filter-options h2 {
@@ -225,6 +233,18 @@ nav h1 a {
    text-transform: uppercase;
 }
 
+#restaurants-list li a:hover {
+   background-color: #fffdd0;
+   color: #890309;
+   border: 1px solid #890309;
+}
+
+/*#restaurants-list li:hover {*/
+   /*background-color: #fffdd0;*/
+   /*border-bottom: 3px solid #eee;*/
+   /*color: #890309;*/
+/*}*/
+
 /* ====================== Restaurant Details ====================== */
 .inside {
    box-sizing: border-box;
@@ -246,7 +266,7 @@ nav h1 a {
    display: flex;
    flex-direction: row;
    flex-wrap: nowrap;
-   height: 300px !important;
+   height: 250px !important;
    width: 100%;
 }
 
@@ -348,6 +368,24 @@ nav h1 a {
 
 #restaurant-hours td {
    color: #666;
+}
+
+#footer .wrapper {
+   display: flex;
+   justify-content: center;
+
+}
+
+#footer .wrapper a {
+   display: flex;
+   justify-content: center;
+   color: #fff !important;
+}
+
+#footer .wrapper a {
+   display: flex;
+   justify-content: center;
+   color: #bbb;
 }
 
 .wrapper {
