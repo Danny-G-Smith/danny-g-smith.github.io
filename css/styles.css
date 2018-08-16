@@ -4,7 +4,7 @@
 body, td, th, p {
    color: #333;
    font-family: Arial, Helvetica, sans-serif;
-   font-size: 18pt;
+   font-size: 18px;
    line-height: 1.5;
 }
 
@@ -49,20 +49,36 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
    /*height: 300px;*/
 }
 
-#footer {
+#footer .wrapper {
+   align-items: center;
    background-color: #444;
    box-sizing: border-box;
    color: #ddd;
-   display: flex;
-   flex-direction: column;
-   flex-wrap: nowrap;
+   display: grid;
    font-size: 14px;
-   height: 65px;
-   justify-content: flex-end;
    letter-spacing: 1px;
-   padding: 25px;
-   text-align: center;
+   padding: 15px 0;
    text-transform: uppercase;
+   width: 100%;
+   grid-template-columns: 1fr;
+   justify-items: center;
+}
+
+@media (min-width: 440px) {
+   #footer .wrapper {
+      align-items: center;
+      background-color: #444;
+      box-sizing: border-box;
+      color: #ddd;
+      display: grid;
+      font-size: 14px;
+      letter-spacing: 1px;
+      padding: 15px 0;
+      text-transform: uppercase;
+      width: 100%;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+   }
 }
 
 /* ====================== Navigation ====================== */
@@ -98,7 +114,7 @@ nav h1 a:hover {
    font-size: 18px;
    list-style: none;
    margin: 0;
-   padding: 10px 40px 16px;
+   padding: 10px 20px 16px;
    width: 100%;
 }
 
@@ -123,8 +139,8 @@ nav h1 a:hover {
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
    color: #000;
-   text-shadow: 1px 1px 3px #fffdd0;
    text-decoration: underline;
+   text-shadow: 1px 1px 3px #fffdd0;
 }
 
 /* ====================== Map ====================== */
@@ -136,12 +152,24 @@ nav h1 a:hover {
 
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
-   align-items: center;
    background-color: #252831;
-   display: flex;
-   height: 85px;
+   display: grid;
+   padding: 15px 0;
    width: 100%;
+   grid-template-columns: 1fr;
    justify-items: center;
+}
+
+@media (min-width: 440px) {
+   .filter-options {
+      align-items: center;
+      background-color: #252831;
+      display: grid;
+      padding: 15px 0;
+      width: 100%;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+   }
 }
 
 .filter-options h2 {
@@ -235,15 +263,9 @@ nav h1 a:hover {
 
 #restaurants-list li a:hover {
    background-color: #fffdd0;
-   color: #890309;
    border: 1px solid #890309;
+   color: #890309;
 }
-
-/*#restaurants-list li:hover {*/
-   /*background-color: #fffdd0;*/
-   /*border-bottom: 3px solid #eee;*/
-   /*color: #890309;*/
-/*}*/
 
 /* ====================== Restaurant Details ====================== */
 .inside {
@@ -296,7 +318,7 @@ nav h1 a:hover {
 #restaurant-name {
    color: #890309;
    font-family: Arial, sans-serif;
-   font-size: 20pt;
+   font-size: 24px;
    font-weight: 200;
    letter-spacing: 0;
    line-height: 1.1;
@@ -329,17 +351,22 @@ nav h1 a:hover {
 #restaurant-container, #reviews-container {
    border-bottom: 1px solid #d9d9d9;
    border-top: 1px solid #fff;
-   padding: 10px 40px 30px;
-   width: 50%;
+   padding: 10px 15px 30px;
+   /*width: 50%;*/
+}
+
+#restaurant-container table {
+   font-size: 18px;
+
 }
 
 #reviews-container {
-   padding: 30px 40px 80px;
+   padding: 30px 15px 80px;
 }
 
 #reviews-container h2 {
    color: #890309;
-   font-size: 24pt;
+   font-size: 30px;
    font-weight: 300;
    letter-spacing: -1px;
    padding-bottom: 1pt;
@@ -370,27 +397,21 @@ nav h1 a:hover {
    color: #666;
 }
 
-#footer .wrapper {
-   display: flex;
-   justify-content: center;
-
-}
-
 #footer .wrapper a {
-   display: flex;
-   justify-content: center;
    color: #fff !important;
+   display: flex;
+   justify-content: center;
 }
 
 #footer .wrapper a {
+   color: #bbb;
    display: flex;
    justify-content: center;
-   color: #bbb;
 }
 
 .wrapper {
-   width: 100%;
    display: grid;
+   width: 100%;
    grid-template-columns: 1fr;
    justify-items: center;
 }
