@@ -29,6 +29,8 @@ This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://w
 
 Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
 
+![alt text](img/lighthouse.png)
+
 ## Credits
 - I used this website to figure out how to setup gh-pages [click here](https://www.youtube.com/watch?v=6O6RWm-llSM)
 - I used this page to find out about the eslint npm package for Udacity and how to set it up. [click here](https://www.npmjs.com/package/eslint-config-udacity)
