@@ -7,9 +7,9 @@ class DBHelper {
     * Change this to restaurants.json file location on your server.
     */
    static get DATABASE_URL() {
-      const port = 8000 // Change this to your server port
-      // return `http://localhost:${port}/data/restaurants.json`;
-      return `https://danny-g-smith.github.io/danny-g-smith.github.io-mws-restaurant-stage-1/data/restaurants.json`
+      const port = 3000 ;// Change this to your server port
+      return `http://localhost:${port}/data/restaurants.json`;
+      //return `https://danny-g-smith.github.io/danny-g-smith.github.io-mws-restaurant-stage-1/data/restaurants.json`
    }
 
    /**
@@ -81,7 +81,7 @@ class DBHelper {
          } else {
             // Filter restaurants to have only given neighborhood
             const results = restaurants.filter(
-               (r) => r.neighborhood == neighborhood,
+               (r) => r.neighborhood == neighborhood
             )
             callback(null, results)
          }

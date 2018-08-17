@@ -2,14 +2,17 @@ let restaurants, neighborhoods, cuisines
 var newMap
 var markers = []
 
-/**
- *      Fetch neighborhoods and cuisines as soon as the page is loaded.
- */
-document.addEventListener('DOMContentLoaded', (event) => {
-   initMap() // added
-   fetchNeighborhoods()
-   fetchCuisines()
-})
+// import ServiceWorkerController from '../sw_cached_site.js';
+//
+//
+// /**
+//  *      Fetch neighborhoods and cuisines as soon as the page is loaded.
+//  */
+// document.addEventListener('DOMContentLoaded', (event) => {
+//    initMap() // added
+//    fetchNeighborhoods()
+//    fetchCuisines()
+// });
 
 /**
  * Fetch all neighborhoods and set their HTML.
@@ -203,6 +206,7 @@ createRestaurantHTML = (restaurant) => {
    return li
 }
 
+
 /**
  * Add markers for current restaurants to the map.
  */
@@ -230,12 +234,12 @@ addMarkersToMap = (restaurants = self.restaurants) => {
  });
  } */
 
-// Make sure sw are supported
+//Make sure sw are supported
 if ('serviceWorker' in navigator) {
    window.addEventListener('load', () => {
       navigator.serviceWorker
          .register('../sw_cached_site.js')
-         //.then((reg) => console.log('Service Worker: Registered Assets'))
-         //.catch((err) => console.log(`Service Worker: Error: ${err}`))
+         .then((reg) => console.log('Service Worker: Registered Assets'))
+         .catch((err) => console.log(`Service Worker: Error: ${err}`))
    })
 }
