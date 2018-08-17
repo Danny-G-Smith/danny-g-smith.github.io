@@ -268,19 +268,9 @@ nav h1 a:hover {
 }
 
 /* ====================== Restaurant Details ====================== */
-.inside {
-   box-sizing: border-box;
-   display: flex;
-   flex-direction: row;
-   flex-flow: wrap;
-   width: 100%;
-}
 
 .inside header {
-   /*position: fixed;*/
-   /*top: 0;*/
    width: 100%;
-   /*z-index: 1000;*/
 }
 
 #maincontent #map-container {
@@ -357,11 +347,19 @@ nav h1 a:hover {
 
 #restaurant-container table {
    font-size: 18px;
-
 }
 
 #reviews-container {
    padding: 30px 15px 80px;
+}
+
+@media (min-width: 1024px) {
+   ul#reviews-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      max-width: 800px;
+   }
 }
 
 #reviews-container h2 {

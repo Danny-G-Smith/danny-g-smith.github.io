@@ -1,34 +1,41 @@
 const cacheName = 'v1';
 
 // Call Install Event
-self.addEventListener( 'install',  ( e ) => {
+// Please note: this gets everything
+self.addEventListener( 'install',  ( event ) => {
    //console.log( 'Service Worker: Installed' );
 } );
 
 // Call Activate Event
-self.addEventListener( 'activate', ( e ) => {
+self.addEventListener( 'activate', ( event ) => {
    //console.log( 'Service Worker: Activated' );
+   console.log( cacheNames );
 
-   // Remove unwanted caches
-   e.waitUntil(
+   // Use Promise to Remove unwanted caches
+   event.waitUntil(
+      // keys are like hashes
+      // cacheNames - A DOMString that represents a
+      //              specific cache to search within.
       caches.keys().then( cacheNames => {
          return Promise.all(
             cacheNames.map( cache => {
+               // Must be a new cache
                if ( cache !== cacheName ) {
                   //console.log( 'Service Worker: Clearing Old Cache' );
                   return caches.delete( cache );
                }
             } )
-         );
-      } )
-   );
+         ); // cacheNames
+      } ) // keys
+   );  //waitUntil
 } );
 
 // Call Fetch Event
-self.addEventListener( 'fetch', ( e ) => {
+self.addEventListener( 'fetch', ( event ) => {
    //console.log('Service Worker: Fetching');
-   e.respondWith(
-      fetch( e.request )
+   // works with promise
+   event.respondWith(
+      fetch( event.request )
          .then( res => {
 
             // Make copy/clone of response
@@ -39,12 +46,14 @@ self.addEventListener( 'fetch', ( e ) => {
                .open( cacheName )
                .then( cache => {
                   // Add response to cache
-                  cache.put( e.request, resClone );
+                  // Note: put() will overwrite any key/value pair previously
+                  // stored in the cache that matches the request.
+                  cache.put( event.request, resClone );
                } );
             return res;
          } )
          .catch( err => caches
-            .match( e.request )
-            .then( res => res ) )
+            .match( event.request )
+            .then(  res => res ) )
    );
 } );
