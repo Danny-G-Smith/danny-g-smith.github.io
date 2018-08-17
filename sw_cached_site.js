@@ -9,7 +9,7 @@ self.addEventListener( 'install',  ( event ) => {
 // Call Activate Event
 self.addEventListener( 'activate', ( event ) => {
    //console.log( 'Service Worker: Activated' );
-   console.log( cacheNames );
+   //console.log( cacheNames );
 
    // Use Promise to Remove unwanted caches
    event.waitUntil(
