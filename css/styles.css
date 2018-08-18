@@ -103,6 +103,11 @@ nav h1 a {
    text-transform: uppercase;
 }
 
+nav h2 a {
+   color: #333;
+   font-size: 20px;
+}
+
 nav h1 a:hover {
    color: #fff;
    text-shadow: 2px 2px 10px #fffdd0;
