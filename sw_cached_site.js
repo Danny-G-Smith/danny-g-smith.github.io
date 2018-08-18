@@ -8,7 +8,7 @@ self.addEventListener( 'install',  ( e ) => {
 
 // Call Activate Event
 self.addEventListener( 'activate', ( e ) => {
-   console.log( 'Service Worker: Activated' );
+   //console.log( 'Service Worker: Activated' );
    //console.log( cacheNames );
 
    // Use Promise to Remove unwanted caches
@@ -21,7 +21,7 @@ self.addEventListener( 'activate', ( e ) => {
             cacheNames.map( cache => {
                // Must be a new cache
                if ( cache !== cacheName ) {
-                  console.log( 'Service Worker: Clearing Old Cache' );
+                  //console.log( 'Service Worker: Clearing Old Cache' );
                   return caches.delete( cache );
                }
             } )
@@ -32,7 +32,10 @@ self.addEventListener( 'activate', ( e ) => {
 
 // Call Fetch Event
 self.addEventListener( 'fetch', ( e ) => {
-   console.log('Service Worker: Fetching');
+   if (e.request.method === 'POST') {
+      //console.log('Service Worker ERROR: Fetching POST');
+   }
+   //console.log('Service Worker: Fetching');
    // works with promise
    e.respondWith(
       fetch( e.request )
